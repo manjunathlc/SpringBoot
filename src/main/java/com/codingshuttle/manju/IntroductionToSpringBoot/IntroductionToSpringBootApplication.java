@@ -10,6 +10,9 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
 	@Autowired
 	Apple apple;
 
+	@Autowired
+	DB dbService;
+
 	public static void main(String[] args) {
 		SpringApplication.run(IntroductionToSpringBootApplication.class, args);
 
@@ -17,6 +20,7 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		apple.eat();
+//		apple.eat();
+		System.out.println(dbService.getData());
 	}
 }
